@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 public class selectionSort {
     public static int[] generateArray(int lengthArray) {
@@ -41,4 +42,3 @@ public class selectionSort {
             System.out.print(p);
         }
     }
-}

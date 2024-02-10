@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class methodsOnString {
@@ -159,4 +160,3 @@ public class methodsOnString {
             System.out.println("error" +exception.getMessage());
         }
     }
-}

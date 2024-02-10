@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class methods {
@@ -96,12 +97,13 @@ public class methods {
         double result = max(x, y, z);
         System.out.println(result);
       
-        int [] elements = {1, 2, 0, 3, 10, 100, 200, 5, 4, 2, 1000};
+
 
     
     
     //Printing numbers stored in the array elements [] using the method printer(int[] array)
-        int display = printer(elements);
+    int [] elements = {1, 2, 0, 3, 10, 100, 200, 5, 4, 2, 1000};    
+    int display = printer(elements);
     
     
     
