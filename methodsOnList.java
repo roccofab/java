@@ -90,10 +90,15 @@ public class methodsOnList {
     }
 
     private static void sortListAscending(ArrayList<Integer> listToSort) {
-        Collections.sort(listToSort);
+        ArrayList<Integer> ascendingList = new ArrayList<>(listToSort);
+        Collections.sort(ascendingList);
+        System.out.println("\nList sorted in ascending order: " + ascendingList);
     }
+
     private static void sortListDescending(ArrayList<Integer> listToSort) {
-        Collections.sort(listToSort, Collections.reverseOrder());
+        ArrayList<Integer> descendingList = new ArrayList<>(listToSort);
+        Collections.sort(descendingList, Collections.reverseOrder());
+        System.out.println("List sorted in descending order: " + descendingList);
     }
 
     private static int firstElement(ArrayList<Integer> list4){
@@ -106,7 +111,8 @@ public class methodsOnList {
         return list5.get(position);
     }
     private static int modifyValue(ArrayList<Integer> list6, int positionElement, int newValue) {
-        return list6.set(positionElement, newValue);
+        list6.set(positionElement, newValue);
+        return list6.get(positionElement);
     }
 
     public static void main(String[] args) {
@@ -162,8 +168,7 @@ public class methodsOnList {
         printIntegerList(listToSort);
         sortListAscending(listToSort);
         sortListDescending(listToSort);
-        System.out.print("\n List sorted in ascending order: " +listToSort);
-        System.out.println("\n List sorted in descending order: " +listToSort);
+       
 
 
         /*generating and printing a list of integers and then printing the first element
@@ -177,7 +182,7 @@ public class methodsOnList {
         
         //printing the last element of the list
         int elementLast = lastElement(listtoDetect);
-        System.out.println("\nThe la st element of the list is: " +elementLast);
+        System.out.println("\nThe last element of the list is: " +elementLast);
 
         
 
@@ -195,12 +200,22 @@ public class methodsOnList {
         ArrayList<Integer> listToModify= enterInteger();
         System.out.println("List of integers: ");
         printIntegerList(listToModify);
-        System.out.println("\nEnter index of the element to modify: ");
+        System.out.println("\nEnter index of the element you want to modify: ");
         int indexToModify = input.nextInt();
-        System.out.println("Enter the new integer number: ");
-        int newElement = input.nextInt();
-        int newList = modifyValue(listToModify, indexToModify, newElement);
-        System.out.print("\nThe new list is: " +newList);
+        int elementToModify = findElement(listToModify, indexToModify);
+        System.out.println("\nThe element in position " + indexToModify + " is: " + elementToModify);
 
+      //modify the element in position found
+        System.out.println("\nEnter the new integer number: ");
+        int newElement = input.nextInt();
+        int modifiedElement = modifyValue(listToModify, indexToModify, newElement);
+        System.out.print("\nThe new list is: ");
+        printIntegerList(listToModify);
+
+
+    }
+    @Override
+    public String toString() {
+        return "methodsOnList []";
     }
 }
