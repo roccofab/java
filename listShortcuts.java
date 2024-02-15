@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -63,3 +65,4 @@ public class listShortcuts {
         System.out.println("List sorted in descending order: " +list1);
     }
 }
+
