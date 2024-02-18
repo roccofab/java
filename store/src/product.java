@@ -26,7 +26,9 @@ public class product implements toStringInterface {
         return amount;
     }
     private double getWeight() {
+
         return weight;
+
     }
     public void setName(String name) {
 
@@ -44,7 +46,9 @@ public class product implements toStringInterface {
     }
 
     public void setWeight(double weight) {
+
         this.weight = weight;
+
     }
 
     @Override
