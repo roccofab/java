@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static <NewAccountManager, NewAccountManager> void main(String[] args) throws IOException {
+    public static <NewAccountManager> void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
         System.out.println("Create new Bank Account(press +), login(press -): ");
         String input = scan.nextLine();
