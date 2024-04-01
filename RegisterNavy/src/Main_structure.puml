@@ -1,0 +1,204 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1858607096 { 
+   	label=CargoShip
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   CargoShip1858607096[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CargoShip</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   tonnellage: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ RegistrationCost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Main2390489[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Main</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2420694 { 
+   	label=Navy
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Navy2420694[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Navy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   name: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_335692591 { 
+   	label=CruiseShip
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   CruiseShip335692591[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CruiseShip</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   MaxCapacity: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ RegistrationBigCruise(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ registrationSmallCruise(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_916551842 { 
+   	label=Archive
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Archive916551842[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Archive</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   V: Navy[] [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ CapacityBigCruiseShips(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ CapacitySmallCruiseShip(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ TonnelageCargo(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addShip(ship: Navy)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ generateCargoShipCode(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ generateCruiseShipCode(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ loadFromFile(fileName: String): Archive</TD></TR>
+<TR><TD ALIGN="LEFT" >+ printArchive(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ saveToFile(fileName: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Archive916551842 -> Navy2420694[label="V
+[0..*]"];
+Main2390489 -> CargoShip1858607096[label="main() -> RegistrationCost()"];
+Navy2420694 -> CargoShip1858607096[arrowhead=none, arrowtail=empty, dir=both];
+Navy2420694 -> CruiseShip335692591[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml

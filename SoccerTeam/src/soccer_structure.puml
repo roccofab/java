@@ -1,0 +1,185 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "soccer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1027069957 { 
+   	label=GoalKeeper
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   GoalKeeper1027069957[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)GoalKeeper</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   penaltiesSaved: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calculatePlayerValue(): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1901885695 { 
+   	label=Player
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Player1901885695[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Player</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   age: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   name: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_217108768 { 
+   	label=Striker
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Striker217108768[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Striker</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   goalScored: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ CalculatePlayerValue(): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_897056407 { 
+   	label=soccer
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   soccer897056407[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)soccer</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   V: Player[] [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   index: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ GenerateNames(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ GeneratePenaltiesSaved(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ generateAge(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ generateGoals(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- generateRandomName(faker: Faker): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPlayerInfo(playerName: String): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ printSoccer()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Player1901885695 -> GoalKeeper1027069957[arrowhead=none, arrowtail=empty, dir=both];
+Player1901885695 -> Striker217108768[arrowhead=none, arrowtail=empty, dir=both];
+soccer897056407 -> GoalKeeper1027069957[label="getPlayerInfo() -> calculatePlayerValue()"];
+soccer897056407 -> Player1901885695[label="V
+[0..*]"];
+soccer897056407 -> Striker217108768[label="getPlayerInfo() -> CalculatePlayerValue()"];
+    
+}
+@enduml
