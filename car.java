@@ -55,14 +55,14 @@ public class car {
             default:
             System.out.println("Not Available");
         }
-        System.out.println("Enter your choice: ");
+        System.out.println("Enter Car's Model: ");
         String choice = input.nextLine();
 
         if(choice.contains("volkswagen")) {
             System.out.println("\n\nRental Time (enter number days): ");
             int rentalTimeV = input.nextInt();
             if(rentalTimeV >= 1 && rentalTimeV < 30) {
-                rentalTimeV *= 100;
+                rentalTimeV *= 70;
                 System.out.println(rentalTimeV+ " $");
              } else if(rentalTimeV >= 30 && rentalTimeV < 363) {
                 rentalTimeV *= 59;
@@ -77,7 +77,7 @@ public class car {
             System.out.println("\n\nRental Time (enter number days): ");
             int rentalTimeA = input.nextInt();
             if(rentalTimeA >= 1 && rentalTimeA < 30 ) {
-                rentalTimeA *= 100;
+                rentalTimeA *= 70;
                 System.out.println(rentalTimeA+ " $");
             } else if(rentalTimeA >= 30 && rentalTimeA < 363) {
                 rentalTimeA *= 59;
@@ -92,7 +92,7 @@ public class car {
             System.out.println("\n\nRental Time(enter number days)");
             int rentalTimeF = input.nextInt();
             if(rentalTimeF >= 1 && rentalTimeF < 30) {
-                rentalTimeF *= 70;
+                rentalTimeF *= 50;
                 System.out.println(rentalTimeF+ " $");
             } else if(rentalTimeF >= 30 && rentalTimeF < 363) {
                 rentalTimeF *= 34;

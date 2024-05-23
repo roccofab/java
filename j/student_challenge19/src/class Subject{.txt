@@ -1,0 +1,35 @@
+class Subject{
+ private String subId;
+ private String name;
+ private int maxMark;
+ private int marksObtained;
+
+ public Subject(String subId, String name, int marksObtained){
+  this.subId = subId;
+  this.name = name;
+  this.maxMark = maxMark;
+ }
+ public String get subId(){
+  return subId; 
+ }
+ public String getName(){
+  return name;
+ }
+ public int maxMark(){
+  return maxMark;
+ }
+ public int marksObtained(){
+  return marksObtained;
+ }
+ public void setMarksObtained(int n){
+  marksObtained = n;
+ }
+ public boolean
+
+ isQualified(int max){
+  return max >= maxMark/10*4; 
+ }
+ public String toString(){
+  return "Subject: " +name+ "\nMarks Obtained: " +marksObtained;
+ }
+}

@@ -30,12 +30,15 @@ public static void main(String[] args) {
         int arrayLength = input.nextInt();
         int[] generatedArray = generateArray(arrayLength);
         for(int numbers : generatedArray) {
-            System.out.print(numbers);
+            System.out.print(numbers+ " ");
         }
         int[] arraySort = arrayToSort(generatedArray);
         System.out.println("The SORTED array is: ");
         for(int numbers1 : arraySort) {
-            System.out.print(+numbers1);
+            System.out.print(numbers1+ " ");
+            if(numbers1 < arraySort) {
+                System.out.println(",");
+            }
         }
 
 }

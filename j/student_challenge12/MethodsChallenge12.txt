@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class MethodsChallenge12{
+ public static boolean EqualNumbers(int n1, n2, n3){
+  return(n1 == n2 && n1 == n3 && n2 == n3); 
+ }
+ public static void main(String[] args){
+ Scanner sc = new Scanner(System.in);
+  System.out.println("Enter Three Integers Numbers: ");
+  int n1 = sc.nextInt();
+  int n2 = sc.nextInt();
+  int n3 = sc.nextInt();
+  if(EqualNumbers(n1, n2, n3)){
+    System.out.println("The Numbers are equals");  
+  } else{
+    System.out.println("The three Numbers are not equals");
+  }
+ }
+}
