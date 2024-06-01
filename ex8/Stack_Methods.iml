@@ -7,8 +7,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="src" level="project" />
-    <orderEntry type="library" exported="" name="Array1D" level="project" />
-    <orderEntry type="module" module-name="Array1D" />
   </component>
 </module>

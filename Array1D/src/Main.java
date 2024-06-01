@@ -1,13 +1,14 @@
+import arrayUtil.Array;
+import arrayUtil.Array2;
 import java.util.Arrays;
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Array numbers = new Array(10);   //istanciate the object numbers from the class Array: the object is an array of random integers values
-
         Array2 numbers2 = new Array2(5, 5);  //istanciate the object numbers2 from the class Array2: the object is a matrix of random integers values
-
         numbers.printArray();
         System.out.println("\nSorted Array: " + numbers.sort());  //sort the original array numbers
 

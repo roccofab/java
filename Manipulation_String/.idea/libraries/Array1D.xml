@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Array1D">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../Array1D" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../Array1D/src" />
+    </SOURCES>
+  </library>
+</component>
