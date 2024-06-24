@@ -1,0 +1,55 @@
+La conversione di una sequenza binaria nella corrispondente
+rappresentazione ottale si può effettuaredirettamente:
+La conversione di una sequenza binaria nella corrispondente
+rappresentazione esadecimale si può effettuare direttamente:
+Una pseudoistruzione è:
+Il codice oggettocontiene:
+Il codice oggetto di un programma che utilizza una libreria deve:
+Il Linker effettua:
+Il Loader effettua:
+)
+Il caricamento del programma eseguibile in Memoria, l'assegnazione dello spazio alle strutture dati
+utilizzate e le inizializzazioni necessarie ad avviarne l'esecuzione
+I collegamenti tra il codice oggetto del programma e il codice oggetto delle procedure che utilizza
+Essere passato al programma Linker che effettua i collegamenti tra il codice oggetto del programma e il
+codice oggetto delle procedure che utilizza
+La traduzione del programma in Linguaggio Macchina fornita dall'Assembler
+Una istruzione del Linguaggio Assembly non implementata a livello Hardware, che esegue operazioni
+mediante altre istruzioni Assembly implementate
+Suddividendo la sequenza binaria in gruppi di 4 simboli a partire da destra (cifre meno significative), e
+sostituendo ad ogni gruppo il corrispondente simbolo della base 16
+Suddividendo la sequenza binaria in gruppi di 3 simboli a partire da destra (cifre meno significative), e
+sostituendo ad ogni gruppo il corrispondente simbolo della base 8
+Document shared on https://www.docsity.com/it/architetture-e-reti-di-calcolatori-aggiornato-al-2021/7209266/
+L'approccio alla compilazione basato sul caricamento dinamico delle
+librerie effettua:
+Il programma eseguibile è prodotto:
+Il Bytecode Java è:
+La Java Virtual Machineè:
+Un Interprete Java è:
+Un sistema dinamico ha la caratteristica detta feedback (retroazione)
+quando:
+La caratteristica di feedback in un circuito digitale è rappresentata
+dallo schema:
+)
+Il comportamento del sistema descritto dallo stato in un istante di tempo influenza il comportamento
+nell'istante di tempo successivo
+Un programma Software che esegue il bytecode Java emulando la Java Virtual Machine su una
+specifica piattaforma
+La macchina astratta capace di eseguire il bytecode Java
+Eseguibile su qualunque computer che disponga di un Interprete Java
+Dal Linker
+I collegamenti tra il codice oggetto del programma e il codice oggetto di una procedura solo quando la
+procedura è chiamata in fase di esecuzione
+Document shared on https://www.docsity.com/it/architetture-e-reti-di-calcolatori-aggiornato-al-2021/7209266/
+L'Algebra di Boole è:
+LE FUNZIONI BOOLEANE SONO:
+L'operatore XOR assume valore "vero" solo quando:
+Una porta logica è:
+)
+Un circuito digitale capace di calcolare un operatore logico dell'Algebra di Boole
+Uno solo dei valori delle variabili è "vero"
+Tutte le funzioni binarie di variabili binarie
+Una struttura di calcolo definita da un Dominio costituito da due elemeti e dagli operatori AND, OR e
+NOT
+Document shared on https://www.docla JVM è una piattaforma che trasforma il codice java in bytecode

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ClassFile_Methods/ClassFile_Methods.iml" filepath="$PROJECT_DIR$/ClassFile_Methods/ClassFile_Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/File_Size/File_Size.iml" filepath="$PROJECT_DIR$/File_Size/File_Size.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Find_LongestWord/Find_LongestWord.iml" filepath="$PROJECT_DIR$/Find_LongestWord/Find_LongestWord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Input-Output.iml" filepath="$PROJECT_DIR$/.idea/Input-Output.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Last_Modified/Last_Modified.iml" filepath="$PROJECT_DIR$/Last_Modified/Last_Modified.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Read_Lines/Read_Lines.iml" filepath="$PROJECT_DIR$/Read_Lines/Read_Lines.iml" />
+    </modules>
+  </component>
+</project>
